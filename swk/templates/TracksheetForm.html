@@ -1,0 +1,32 @@
+{% extends 'userLogged_base.html' %}
+{% load materializecss %}
+{% load static %}
+{% block content1 %}
+
+
+   <div style="width: 70%;  margin: 0px 0px 0px 443px;"> 
+    <h1><center>Data on Houses providing seggregated Waste </center></h1>
+    <h3>
+        {% for message in messages %}
+        <h3>{{message}}</h3>{% endfor %}
+    
+        <form method="POST" class="post-form" >  
+            {% csrf_token %}  
+           
+            <div class="card-panel"> 
+                <span class="green-text text-darken-2";> 
+                    {{ form.as_p }}
+                    <!-- {{ form|materializecss:'custom_size=m6' }} -->
+                    
+                 </span> 
+            </div> 
+           
+         
+        <button type="submit" class="save btn btn-primary">Save</button>  
+        </form>
+    </h3>
+    </div>
+
+{% endblock %}
+
+

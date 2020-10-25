@@ -1,0 +1,19 @@
+{% extends 'userLogged_base.html' %} 
+{% load static %}
+
+{%block content1 %} 
+<h3> Click the links for data entry :</h3>
+<li class="nav-item">
+  <a class="nav-link" href="{% url 'trackform' %}">Daily Entry Form </a>
+  <!-- <a class="nav-link" href="adminlogin/">Track Sheet Form Entry</a> -->
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="/">Kiosk Entry Form </a>
+    <!-- <a class="nav-link" href="adminlogin/">Track Sheet Form Entry</a> -->
+  </li>
+<li class="nav-item">
+<a class="nav-link" href="https://ee.humanitarianresponse.info/x/dwsYkgyQ">Kobo Form </a>
+<!-- <a class="nav-link" href="adminlogin/">Track Sheet Form Entry</a> -->
+</li>
+</ul>
+{% endblock %}
